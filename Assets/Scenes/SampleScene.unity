@@ -247,8 +247,8 @@ Transform:
   m_GameObject: {fileID: 292464494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 10.5, z: 1}
+  m_LocalPosition: {x: -9.4, y: 6.15, z: 0}
+  m_LocalScale: {x: 1, y: 24.28125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 989344386}
   - component: {fileID: 989344385}
   - component: {fileID: 989344384}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bullet Destroyer Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,6 +488,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1435790056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435790058}
+  - component: {fileID: 1435790057}
+  m_Layer: 0
+  m_Name: GameLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1435790057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435790056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a12e8caf9d5a545b3d759675dac5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number_of_shells: 0
+  shell: {fileID: 3236303266395679342, guid: cc796477cf3a4ce45a8cad6c921e8b75, type: 3}
+--- !u!4 &1435790058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435790056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4573069, y: 1.082494, z: -0.04016422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680841779
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +547,7 @@ GameObject:
   - component: {fileID: 1680841780}
   m_Layer: 6
   m_Name: Bottom Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +677,7 @@ GameObject:
   - component: {fileID: 1755676749}
   m_Layer: 6
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,8 +788,8 @@ Transform:
   m_GameObject: {fileID: 1755676748}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 10.5, z: 1}
+  m_LocalPosition: {x: 9.4, y: 6.15, z: 0}
+  m_LocalScale: {x: 1, y: 24.28125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -763,7 +809,7 @@ GameObject:
   - component: {fileID: 1861155036}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -782,6 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 300
   bullet: {fileID: 4354857954358137791, guid: 16d41aec4bd01354fa400480d18bb237, type: 3}
+  bullet_count: 0
 --- !u!61 &1861155037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -931,3 +978,4 @@ SceneRoots:
   - {fileID: 292464497}
   - {fileID: 1680841782}
   - {fileID: 989344387}
+  - {fileID: 1435790058}

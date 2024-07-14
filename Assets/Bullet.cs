@@ -10,11 +10,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Get rreference to rigidbody.
-        rb = GetComponent<Rigidbody2D>();
-
-        //Set starting velocity of bullet to make it travel upwards.
-        rb.velocity = Vector3.up * 500 * Time.fixedDeltaTime;
+        
     }
 
     // Update is called once per frame
@@ -25,6 +21,18 @@ public class Bullet : MonoBehaviour
 
     private void OnDestroy()
     {
-        player.bullet_count -= 1;
+        if(player != null)
+        {
+            player.bullet_count -= 1;
+        } 
+    }
+
+    public void SetUp(Vector3 dir)
+    {
+        //Get rreference to rigidbody.
+        rb = GetComponent<Rigidbody2D>();
+
+        //Set starting velocity of bullet to make it travel upwards.
+        rb.velocity = dir * 500 * Time.fixedDeltaTime;
     }
 }

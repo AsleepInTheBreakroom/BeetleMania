@@ -52,10 +52,9 @@ public class Player : MonoBehaviour
     void SpawnBullet()
     {
         GameObject new_bullet = Instantiate(bullet);
-
         new_bullet.transform.position = transform.position;
         new_bullet.GetComponent<Bullet>().player = this;
-
+        new_bullet.GetComponent<Bullet>().SetUp(Vector3.up);
         bullet_count += 1;
     }
 }
